@@ -2,6 +2,7 @@
   "name": "escala-notas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://labcomp.cl/~saedo/escala-notas/",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "react": "^16.12.0",
