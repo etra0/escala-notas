@@ -7,10 +7,6 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-body {
   background-color: #282c34;
   display: flex;
@@ -23,7 +19,7 @@ body {
 
 .App-content {
   margin-top: 10px;
-  width: 50%;
+  width: 70%;
 }
 
 .input-box {
