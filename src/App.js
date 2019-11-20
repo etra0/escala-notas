@@ -18,7 +18,7 @@ const theme = createMuiTheme({
 });
 
 function ScoreTable(props) {
-  const { rows, valid } = props;
+  const { rows, valid, notaAprobacion } = props;
 
   return (
     <Fade in={valid}>
@@ -34,7 +34,7 @@ function ScoreTable(props) {
             <TableRow key={p}>
               <TableCell>{p}</TableCell>
               <TableCell
-                style={{ color: n.toFixed(1) < 4 ? "#f34a4a" : "white" }}
+                style={{ color: n.toFixed(1) < parseFloat(notaAprobacion) ? "#f34a4a" : "white" }}
               >
                 {n.toFixed(1)}
               </TableCell>
@@ -147,7 +147,7 @@ function App() {
         <div className="App-body">
           <div className="App-content">
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={12} md={4}>
+              <Grid item xs={12} md={4}>
                 {Object.keys(parameters).map(v => (
                   <ParameterInput
                     key={v}
@@ -158,9 +158,9 @@ function App() {
                 ))}
               </Grid>
 
-              <Grid item xs={12} sm={12} md={8}>
-                {tableData && (
-                  <ScoreTable rows={tableData} valid={validTable} />
+              <Grid item xs={12} md={8}>
+                {tableData && Object.keys(parameters).length && (
+                  <ScoreTable rows={tableData} valid={validTable} notaAprobacion={parameters.notaAprobacion.value} />
                 )}
               </Grid>
             </Grid>
