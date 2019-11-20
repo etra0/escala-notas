@@ -2,7 +2,7 @@
   "name": "escala-notas",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://labcomp.cl/~saedo/escala-notas/",
+  "homepage": "https://etra0.github.io/escala-notas/",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "react": "^16.12.0",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -29,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
