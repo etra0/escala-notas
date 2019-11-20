@@ -147,7 +147,7 @@ function App() {
         <div className="App-body">
           <div className="App-content">
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={12} lg={4}>
+              <Grid item xs={12} sm={12} md={4}>
                 {Object.keys(parameters).map(v => (
                   <ParameterInput
                     key={v}
@@ -158,7 +158,7 @@ function App() {
                 ))}
               </Grid>
 
-              <Grid item xs={12} sm={12} lg={8}>
+              <Grid item xs={12} sm={12} md={8}>
                 {tableData && (
                   <ScoreTable rows={tableData} valid={validTable} />
                 )}
