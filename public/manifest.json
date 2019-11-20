@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Escala de notas",
+  "name": "Generadora de escala de notas",
   "icons": [
     {
       "src": "favicon.ico",
