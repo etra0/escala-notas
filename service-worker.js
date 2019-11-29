@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/escala-notas/precache-manifest.d55c1897417b4c7b6cad2379fb96d1ed.js"
+  "/escala-notas/precache-manifest.ef8227fb596b4be937033df91d83e53c.js"
 );
 
 self.addEventListener('message', (event) => {
