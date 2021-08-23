@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/escala-notas/static/css/main.1bf15677.chunk.css",
-    "main.js": "/escala-notas/static/js/main.3ce89ef4.chunk.js",
-    "main.js.map": "/escala-notas/static/js/main.3ce89ef4.chunk.js.map",
+    "main.js": "/escala-notas/static/js/main.0e90149d.chunk.js",
+    "main.js.map": "/escala-notas/static/js/main.0e90149d.chunk.js.map",
     "runtime-main.js": "/escala-notas/static/js/runtime-main.abbb98c5.js",
     "runtime-main.js.map": "/escala-notas/static/js/runtime-main.abbb98c5.js.map",
     "static/js/2.fe7206cd.chunk.js": "/escala-notas/static/js/2.fe7206cd.chunk.js",
     "static/js/2.fe7206cd.chunk.js.map": "/escala-notas/static/js/2.fe7206cd.chunk.js.map",
     "index.html": "/escala-notas/index.html",
-    "precache-manifest.e858bf6859ccd56abb6ab6d42c1a2fdc.js": "/escala-notas/precache-manifest.e858bf6859ccd56abb6ab6d42c1a2fdc.js",
+    "precache-manifest.a3b0ec8f1cbd03aa02625db98f4eb0f0.js": "/escala-notas/precache-manifest.a3b0ec8f1cbd03aa02625db98f4eb0f0.js",
     "service-worker.js": "/escala-notas/service-worker.js",
     "static/css/main.1bf15677.chunk.css.map": "/escala-notas/static/css/main.1bf15677.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.abbb98c5.js",
     "static/js/2.fe7206cd.chunk.js",
     "static/css/main.1bf15677.chunk.css",
-    "static/js/main.3ce89ef4.chunk.js"
+    "static/js/main.0e90149d.chunk.js"
   ]
 }

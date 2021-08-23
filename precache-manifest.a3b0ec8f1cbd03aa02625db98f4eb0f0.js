@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bf8edd55b10ad7af1261121d277aa38",
+    "revision": "293b103eccf423c2570228bb456fe359",
     "url": "/escala-notas/index.html"
   },
   {
-    "revision": "a72a2378ee8af56ff4d2",
+    "revision": "9a1235c3f104f52246a5",
     "url": "/escala-notas/static/css/main.1bf15677.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/escala-notas/static/js/2.fe7206cd.chunk.js"
   },
   {
-    "revision": "a72a2378ee8af56ff4d2",
-    "url": "/escala-notas/static/js/main.3ce89ef4.chunk.js"
+    "revision": "9a1235c3f104f52246a5",
+    "url": "/escala-notas/static/js/main.0e90149d.chunk.js"
   },
   {
     "revision": "00080cd9d9492986818d",
