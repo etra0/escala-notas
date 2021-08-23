@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
 }
 
-.rojo {
+.App.rojo {
   color: rgb(218, 77, 77);
 }
 

@@ -1,46 +1,18 @@
 import React, { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import "./App.css";
 import Grid from "@material-ui/core/Grid";
 import { DataGrid } from "@material-ui/data-grid";
 import Fade from "@material-ui/core/Fade";
+import clsx from 'clsx';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: "dark"
   }
 });
-
-// function ScoreTable(props) {
-//   const { rows, valid, notaAprobacion } = props;
-
-//   return (
-//     <Fade in={valid}>
-//       <Table>
-//         <TableHead>
-//           <TableRow>
-//             <TableCell>Puntos</TableCell>
-//             <TableCell>Nota</TableCell>
-//           </TableRow>
-//         </TableHead>
-//         <TableBody>
-//           {rows.map(([p, n]) => (
-//             <TableRow key={p}>
-//               <TableCell>{p}</TableCell>
-//               <TableCell
-//                 style={{ color: n.toFixed(1) < parseFloat(notaAprobacion) ? "#f34a4a" : "white" }}
-//               >
-//                 {n.toFixed(1)}
-//               </TableCell>
-//             </TableRow>
-//           ))}
-//         </TableBody>
-//       </Table>
-//     </Fade>
-//   );
-// }
 
 function ParameterInput(props) {
   const { keyName, values, handler } = props;
@@ -138,7 +110,8 @@ function App() {
   const columns = [
     {field: "score", headerName: "Puntaje", width: 150},
     {field: "grade", headerName: "Nota", width: 150, 
-      cellClassName: (params) =>  (+params.value) < (+parameters.notaAprobacion.value) ? "rojo" : "" },
+      cellClassName: (params) =>  clsx("App", {rojo: (+params.value) < (+parameters.notaAprobacion.value)})
+    },
   ];
 
 
@@ -159,7 +132,7 @@ function App() {
                 ))}
               </Grid>
 
-              <Grid item xs={12} md={8} style={{width: "100%", minHeight: "400px"}}>
+              <Grid item xs={12} md={8} style={{width: "100%", minHeight: "500px"}}>
                 <DataGrid
                  rows={tableData}
                  columns={columns}
