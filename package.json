@@ -2,7 +2,7 @@
   "name": "escala-notas",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://etra0.github.io/",
+  "homepage": "https://etra0.github.io/escala-notas/",
   "dependencies": {
     "@material-ui/core": "^4.12.1",
     "@material-ui/data-grid": "^4.0.0-alpha.37",
