@@ -4,11 +4,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import "./App.css";
 import Grid from "@material-ui/core/Grid";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
+import { DataGrid } from "@material-ui/data-grid";
 import Fade from "@material-ui/core/Fade";
 
 const theme = createMuiTheme({
@@ -17,34 +13,34 @@ const theme = createMuiTheme({
   }
 });
 
-function ScoreTable(props) {
-  const { rows, valid, notaAprobacion } = props;
+// function ScoreTable(props) {
+//   const { rows, valid, notaAprobacion } = props;
 
-  return (
-    <Fade in={valid}>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Puntos</TableCell>
-            <TableCell>Nota</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(([p, n]) => (
-            <TableRow key={p}>
-              <TableCell>{p}</TableCell>
-              <TableCell
-                style={{ color: n.toFixed(1) < parseFloat(notaAprobacion) ? "#f34a4a" : "white" }}
-              >
-                {n.toFixed(1)}
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Fade>
-  );
-}
+//   return (
+//     <Fade in={valid}>
+//       <Table>
+//         <TableHead>
+//           <TableRow>
+//             <TableCell>Puntos</TableCell>
+//             <TableCell>Nota</TableCell>
+//           </TableRow>
+//         </TableHead>
+//         <TableBody>
+//           {rows.map(([p, n]) => (
+//             <TableRow key={p}>
+//               <TableCell>{p}</TableCell>
+//               <TableCell
+//                 style={{ color: n.toFixed(1) < parseFloat(notaAprobacion) ? "#f34a4a" : "white" }}
+//               >
+//                 {n.toFixed(1)}
+//               </TableCell>
+//             </TableRow>
+//           ))}
+//         </TableBody>
+//       </Table>
+//     </Fade>
+//   );
+// }
 
 function ParameterInput(props) {
   const { keyName, values, handler } = props;
@@ -58,7 +54,7 @@ function ParameterInput(props) {
         type="number"
         fullWidth={true}
         value={value}
-        InputProps={keyName == "exigencia" ? { endAdornment: "%" } : {}}
+        InputProps={keyName === "exigencia" ? { endAdornment: "%" } : {}}
         error={isNaN(value) || value < 0}
       />
     </div>
@@ -81,8 +77,6 @@ function App() {
 
     const data = JSON.parse(localStorage.getItem('data')) || dataTemplate;
     setParameters(data);
-    console.log(data)
-
   }, [])
 
 
@@ -103,7 +97,7 @@ function App() {
           (typeof parameters[v].value === "undefined" ||
             isNaN(parseFloat(parameters[v].value))),
         0
-      ) == 0;
+      ) === 0;
     setValidTable(isValid);
 
     const _p = JSON.parse(JSON.stringify(parameters));
@@ -111,7 +105,7 @@ function App() {
 
     if (Object.keys(_p).length === 0 || _p.incremento.value <= 0 || !isValid) return;
     let calc = p => {
-      let exigencia = _p.exigencia.value / 100;
+      let exigencia = _p.exigencia.value / 100.;
       let puntajeAprobacion = _p.puntajeMax.value * exigencia;
       let m1 =
         (_p.notaAprobacion.value - _p.notaMin.value) /
@@ -129,17 +123,24 @@ function App() {
 
     let arr = [];
     for (
-      let i = _p.puntajeMin.value;
-      i <= _p.puntajeMax.value;
-      i += +_p.incremento.value
+      let i = +_p.puntajeMin.value, id = 0;
+      i <= +_p.puntajeMax.value;
+      i += +_p.incremento.value, id++
     ) {
-      arr.push([i, calc(i)]);
+      arr.push({id: id, score: +i, grade: calc(i).toFixed(1)});
     }
 
     setTableData(arr);
     localStorage.setItem('data', JSON.stringify(_p));
 
   }, [parameters]);
+
+  const columns = [
+    {field: "score", headerName: "Puntaje", width: 150},
+    {field: "grade", headerName: "Nota", width: 150, 
+      cellClassName: (params) =>  (+params.value) < (+parameters.notaAprobacion.value) ? "rojo" : "" },
+  ];
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -158,10 +159,12 @@ function App() {
                 ))}
               </Grid>
 
-              <Grid item xs={12} md={8}>
-                {tableData && Object.keys(parameters).length && (
-                  <ScoreTable rows={tableData} valid={validTable} notaAprobacion={parameters.notaAprobacion.value} />
-                )}
+              <Grid item xs={12} md={8} style={{width: "100%", minHeight: "400px"}}>
+                <DataGrid
+                 rows={tableData}
+                 columns={columns}
+                 autoPageSize={true}
+                />
               </Grid>
             </Grid>
           </div>

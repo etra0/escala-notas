@@ -29,6 +29,10 @@ body {
   justify-content: space-between;
 }
 
+.rojo {
+  color: rgb(218, 77, 77);
+}
+
 .App-link {
   color: #09d3ac;
 }

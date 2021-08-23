@@ -4,7 +4,8 @@
   "private": true,
   "homepage": "https://etra0.github.io/escala-notas/",
   "dependencies": {
-    "@material-ui/core": "^4.6.1",
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
