@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/escala-notas/static/css/main.4f75c9d2.chunk.css",
-    "main.js": "/escala-notas/static/js/main.c414bfd5.chunk.js",
-    "main.js.map": "/escala-notas/static/js/main.c414bfd5.chunk.js.map",
+    "main.css": "/escala-notas/static/css/main.1bf15677.chunk.css",
+    "main.js": "/escala-notas/static/js/main.245934ec.chunk.js",
+    "main.js.map": "/escala-notas/static/js/main.245934ec.chunk.js.map",
     "runtime-main.js": "/escala-notas/static/js/runtime-main.abbb98c5.js",
     "runtime-main.js.map": "/escala-notas/static/js/runtime-main.abbb98c5.js.map",
-    "static/js/2.678a344e.chunk.js": "/escala-notas/static/js/2.678a344e.chunk.js",
-    "static/js/2.678a344e.chunk.js.map": "/escala-notas/static/js/2.678a344e.chunk.js.map",
+    "static/js/2.2dad8ccb.chunk.js": "/escala-notas/static/js/2.2dad8ccb.chunk.js",
+    "static/js/2.2dad8ccb.chunk.js.map": "/escala-notas/static/js/2.2dad8ccb.chunk.js.map",
     "index.html": "/escala-notas/index.html",
-    "precache-manifest.ef8227fb596b4be937033df91d83e53c.js": "/escala-notas/precache-manifest.ef8227fb596b4be937033df91d83e53c.js",
+    "precache-manifest.d0d9d2da8b47b71c7058648125044b61.js": "/escala-notas/precache-manifest.d0d9d2da8b47b71c7058648125044b61.js",
     "service-worker.js": "/escala-notas/service-worker.js",
-    "static/css/main.4f75c9d2.chunk.css.map": "/escala-notas/static/css/main.4f75c9d2.chunk.css.map"
+    "static/css/main.1bf15677.chunk.css.map": "/escala-notas/static/css/main.1bf15677.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.abbb98c5.js",
-    "static/js/2.678a344e.chunk.js",
-    "static/css/main.4f75c9d2.chunk.css",
-    "static/js/main.c414bfd5.chunk.js"
+    "static/js/2.2dad8ccb.chunk.js",
+    "static/css/main.1bf15677.chunk.css",
+    "static/js/main.245934ec.chunk.js"
   ]
 }
