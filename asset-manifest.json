@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5010f65.chunk.css",
-    "main.js": "/static/js/main.9c83a0f7.chunk.js",
-    "main.js.map": "/static/js/main.9c83a0f7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.90f971e5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.90f971e5.js.map",
-    "static/js/2.042d4657.chunk.js": "/static/js/2.042d4657.chunk.js",
-    "static/js/2.042d4657.chunk.js.map": "/static/js/2.042d4657.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.c9458cbd0eefcff3562dfa492ecd4eed.js": "/precache-manifest.c9458cbd0eefcff3562dfa492ecd4eed.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d5010f65.chunk.css.map": "/static/css/main.d5010f65.chunk.css.map"
+    "main.css": "/escala-notas/static/css/main.d5010f65.chunk.css",
+    "main.js": "/escala-notas/static/js/main.9ada10f5.chunk.js",
+    "main.js.map": "/escala-notas/static/js/main.9ada10f5.chunk.js.map",
+    "runtime-main.js": "/escala-notas/static/js/runtime-main.bb4ef638.js",
+    "runtime-main.js.map": "/escala-notas/static/js/runtime-main.bb4ef638.js.map",
+    "static/js/2.822bab23.chunk.js": "/escala-notas/static/js/2.822bab23.chunk.js",
+    "static/js/2.822bab23.chunk.js.map": "/escala-notas/static/js/2.822bab23.chunk.js.map",
+    "index.html": "/escala-notas/index.html",
+    "precache-manifest.875e87ae238f879c6a92530ccb496470.js": "/escala-notas/precache-manifest.875e87ae238f879c6a92530ccb496470.js",
+    "service-worker.js": "/escala-notas/service-worker.js",
+    "static/css/main.d5010f65.chunk.css.map": "/escala-notas/static/css/main.d5010f65.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.90f971e5.js",
-    "static/js/2.042d4657.chunk.js",
+    "static/js/runtime-main.bb4ef638.js",
+    "static/js/2.822bab23.chunk.js",
     "static/css/main.d5010f65.chunk.css",
-    "static/js/main.9c83a0f7.chunk.js"
+    "static/js/main.9ada10f5.chunk.js"
   ]
 }
